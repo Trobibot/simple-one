@@ -1,0 +1,77 @@
+{
+    "version": 2,
+    "final_space": true,
+    "palette": {
+        "primary": "#ffffff",
+        "secondary": "#daa520"
+    },
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "type": "path",
+  
+            "style": "diamond",
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b0",
+  
+            "properties": { "style": "full" },
+            "template": " {{ .Path }} ",
+  
+            "background": "p:primary",
+            "foreground": "p:secondary"
+          },
+          {
+            "type": "git",
+  
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            
+            "properties": {
+              "fetch_status": true,
+              "fetch_stash_count": true,
+              "fetch_upstream_icon": true
+            },
+            "template": " {{ .HEAD }} {{if .BranchStatus }}{{ .BranchStatus }}{{ end }} {{ if .Working.Changed }}Working: {{ if gt .Working.Added 0 }}{{ .Working.Added }}+ {{ end }}{{ if gt .Working.Deleted 0 }}{{ .Working.Deleted }}- {{ end }}{{ if gt .Working.Modified 0 }}{{ .Working.Modified }}~ {{ end }}{{ if gt .Working.Untracked 0 }}{{ .Working.Untracked }}? {{ end }}{{ if .Staging.Changed }}Staging: {{ if gt .Staging.Added 0 }}{{ .Staging.Added }}+ {{ end }}{{ if gt .Staging.Deleted 0 }}{{ .Staging.Deleted }}- {{ end }}{{ if gt .Staging.Modified 0 }}{{ .Staging.Modified }}~ {{ end }}{{ if gt .Staging.Untracked 0 }}{{ .Staging.Untracked }}? {{ end }}{{ end }}{{ end }}",
+  
+            "background": "p:primary",
+            "foreground": "p:secondary"
+          }
+        ]
+      },
+      {
+        "type": "rprompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "type": "node",
+            
+            "style": "diamond",
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4",
+  
+            "template": " \uE718 {{ .Full }} ",
+  
+            "background": "p:primary",
+            "foreground": "p:secondary"
+          },
+          {
+            "type": "path",
+  
+            "style": "diamond",
+            "leading_diamond": " \ue0b6",
+            "trailing_diamond": "\ue0b4",
+  
+            "properties": { "style": "folder" },
+            "template": "\ue5ff {{ path .Path .Location }} ",
+  
+            "background": "p:primary",
+            "foreground": "p:secondary"
+          }
+        ]
+      }
+    ]
+  }
+  

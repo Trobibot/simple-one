@@ -48,7 +48,7 @@
           },
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": " \ue718 {{ .Full }} ",
+          "template": "\ue718 {{ .Full }} ",
           "foreground": "p:secondary",
           "background": "p:primary",
           "type": "node",

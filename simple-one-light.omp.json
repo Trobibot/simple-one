@@ -56,6 +56,18 @@
         },
         {
           "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "\ue73c {{ .Venv }} {{ .Major }}.{{ .Minor }}",
+          "foreground": "p:secondary",
+          "background": "p:primary",
+          "type": "python",
+          "style": "diamond"
+        },
+        {
+          "properties": {
             "cache_duration": "none",
             "style": "folder"
           },
